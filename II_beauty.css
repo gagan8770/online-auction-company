@@ -1,0 +1,91 @@
+
+
+body{
+    /* background-color:lightyellow; */
+    background-color: lightcyan;
+}
+header {
+    background: lightblue;
+    text-align: center;
+    color: white;
+    width: 100%;
+    position: fixed;
+    transition: 0.4s;
+    overflow: hidden;
+    z-index: 100;
+    padding: 0px 2px 44px 2px;
+}
+
+.icon{
+    background-size: cover;
+    margin-bottom: 20px;
+    /* margin-left: 10px; */
+    font-size: 55px;
+    height: 15px;
+    width: 10px;
+    padding: 0px 0px 4% 0px;
+    position: top;
+    transition: 0.5s;
+ }
+
+.bar{
+    font-size: 35px;
+    color: white;
+    margin-right: 20px;
+}
+nav {
+    display: flex;  /*to align the elements correctly*/
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+
+nav li{
+    display: inline;  /* To display text in row */
+    margin: 15px;
+}
+
+nav a{
+    text-decoration: none; /* to convert the link into simple word */
+    color: white;
+}
+
+
+ 
+.man{
+    background-color: black;padding: 2% 0% 2% 0%;border: 20px solid white;;color: WHITE;font-size: 900%
+}
+.man:hover{
+    background-color: white;padding: 3% 3% 3% 3%;border : 20px solid black;color: black;
+}
+.size{
+    border: 1px solid black;border-radius: 10px;justify-content:center;padding: 4px 4px 4px 4px;background-color:lightcyan;
+}
+.size:hover{
+    border: 1px solid red;border-radius: 10px;background-color:black;color: white;
+}
+.woman{
+    background-color: rgb(87, 61, 100);padding: 2% 0% 2% 0%;border: 20px solid white;;color: WHITE;font-size: 900%
+}
+.woman:hover{
+    background-color: white;padding: 3% 3% 3% 3%;border : 20px solid rgb(87, 61, 100);color: black;font-size:xx-large;
+}
+.child{
+    background-color: darkorange;padding: 2% 0% 2% 0%;border: 20px solid white;;color: WHITE;font-size: 900%
+}
+.child:hover{
+    background-color: white;padding: 3% 3% 3% 3%;border : 20px solid darkorange;color: black;font-size:xx-large;
+}
+.man1{
+    float: left;padding: 0% 15% 0% 15%;margin-bottom: 7%;color: white;background-color: orange; ;text-decoration: none;border-radius: 3%;border: 7px solid white;
+}
+.man1:hover{
+    color: orange;background-color: white;border: 7px solid orange;
+}
+.woman1{
+    float: right;padding: 0% 15% 0% 15%;margin-bottom: 7%;color: white;background-color: orange; ;text-decoration: none;border-radius: 3%;border: 7px solid white;
+}
+.woman1:hover{
+    color: orange;background-color: white;border: 7px solid orange;
+}

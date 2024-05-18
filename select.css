@@ -1,0 +1,17 @@
+body{
+    background-image: url("https://img.freepik.com/premium-photo/abstract-white-design-background-with-smooth-wavy-lines_476363-6179.jpg") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+.Img1:hover{
+        background-color:darkkhaki
+}
+.Img:hover{
+    background-color:pink;
+}
+.year:hover{
+    background-color: burlywood;
+}
+.ch:hover{
+    background-color: chocolate;
+}

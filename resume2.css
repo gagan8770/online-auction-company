@@ -1,0 +1,38 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: bisque;
+  }
+  
+  /* give style to name */
+  header {
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  p {
+    margin: 5px 0;
+  }
+  
+  .contact,
+  .education,
+  .experience,
+  .skills {
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  article {
+    margin-bottom: 20px;
+  }
+  
+  /* Add more styling as needed */
+  

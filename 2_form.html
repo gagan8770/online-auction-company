@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - OnlineAuction</title>
+    <link rel="stylesheet" href="2_form.css">
+    <link rel="shortcut icon" href="favicon.icon" type="image/x-icon">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+<script>
+    
+    let accordian = document.getElementsByClassName("FAQ__title");
+
+for (let i = 0; i < accordian.length; i++) {
+  accordian[i].addEventListener("click", function () {
+    if (this.childNodes[1].classList.contains("fa-plus")) {
+      this.childNodes[1].classList.remove("fa-plus");
+      this.childNodes[1].classList.add("fa-times");
+    } else {
+      this.childNodes[1].classList.remove("fa-times");
+      this.childNodes[1].classList.add("fa-plus");
+    }
+
+    let content = this.nextElementSibling;
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+
+</script>
+</head>
+<body> 
+    <header>
+        <nav>
+            <div class="logo">
+                <h1 id="name"><h1 class="animate__animated animate__flip animate__repeat-4 ">Indian Auction Company</h1></h1>
+            
+            </div>
+            <ul>
+                <li><a href="project.html">Home</a></li>
+                <li><a href="2_homepage.HTML">Customer Helpline</a></li>
+                <li><a href="2_homepage.HTML">About Us</a></li>
+                <li><a href="2_homepage.HTML">Services</a></li>
+                <li><a href="register.html">Register Here</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="registration-form">
+            <h2><u>LOGIN TO YOUR ACCOUNT</u></h2>
+            <form action="project.html"> <!--store and send-->
+                <div class="form-group">
+                    <P>Username:</P>
+                    <input type="text" id="username" name="Enter username" placeholder="Enter your Username" required>
+                </div>
+                <div class="form-group">
+                    <p>Email:</p>
+                    <input type="email" id="email" name="email" placeholder="Enter your E-mail" required>
+                </div>
+                <div class="form-group">
+                    <p>Password:</p>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-group">
+                    <a href="html/project.html"><button type="submit" id="btn">LOGIN</button></a>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <br>
+        
+    <div class="end" id="#footer" >
+        &copy; 2023 ,IAC, All Rights Reserved Terms of Use and Privacy Policy
+    </div>
+    </footer>
+    <script src="2_form.js"></script>
+</body>
+</html>

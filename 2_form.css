@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-image: url(login_back2.gif);
+    background-size: cover;
+}
+
+
+header {
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(58,54,54,1) 44%, rgba(0,0,0,1) 100%, rgba(0,0,0,0.8178921226693803) 100%);
+    color: white;
+    padding: 10px 0;
+    box-shadow: 5px 5px 5px rgb(142, 142, 142); 
+   
+}
+
+nav {
+    display: flex;  /* to align the elements correctly*/
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+
+nav li{
+    display: inline;  /* To display text in row */
+    margin: 15px;
+}
+
+nav a{
+    text-decoration: none; /* to convert the link into simple word */
+    color: white;
+}
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+    animation-iteration-count: 5sec;
+    animation: barshine 5s linear infinite;
+}
+h1{
+    animation-delay: 2s;
+    animation-duration: 2s;
+
+    
+
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+main {
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 20px;
+}
+h2{
+    color: white;
+}
+p{
+    color: white;
+}
+.registration-form {
+background: rgba(255, 255, 255, 0);
+border-radius: 16px;
+backdrop-filter: blur(9.5px);               
+-webkit-backdrop-filter: blur(9.5px);
+border: 1px solid rgba(255, 255, 255, 0.61);
+padding: 20px;
+}
+
+h2 {
+
+    margin-top: 0;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    border: 20px;
+    margin: 20px;
+    color: white;
+    font-weight: bold;
+    
+    
+}
+
+
+input{
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    border: 2px solid black;   /*border of inside column */
+    border-radius: 5px;
+    font-size: 16px;
+   
+}
+.registration-form:hover{
+    transform: scale(1.05);
+    transition-duration: 1s;
+    animation-iteration-count: infinite;
+
+}
+button {
+    background-color: #040915;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+     
+}
+
+button:hover {
+    background-color: #50667f;
+}
+
+.end {
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(58,54,54,1) 44%, rgba(0,0,0,1) 100%, rgba(0,0,0,0.8178921226693803) 100%);
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    box-shadow: 5px 5px 5px rgb(142, 142, 142);
+    z-index: 10; /* back and forward of footer*/
+    position: bottom;
+}
+
+#submit a{
+    text-decoration: none; /*convert into normal words*/
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+    }
+    
+    .cart-container {
+        max-width: 800px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .products {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    
+    .product {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .add-to-cart {
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+    
+    .cart {
+        border-top: 1px solid #ddd;
+        padding-top: 20px;
+    }
+    
+    .cart h2 {
+        margin-bottom: 10px;
+    }
+    
+    .cart-total {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+    
+    .clear-cart {
+        background-color: #ff3333;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    </style>
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <div class="cart-container">
+        <h1>Shopping Cart</h1>
+        <div class="products">
+            <div class="product">
+                <span class="product-name">Item 1</span>
+                <span class="product-price">$10.00</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Add more product entries as needed -->
+        </div>
+        <div class="cart">
+            <h2>Cart</h2>
+            <ul id="cart-list"></ul>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="total-amount">$0.00</span>
+            </div>
+            <button class="clear-cart">Clear Cart</button>
+        </div>
+    </div>
+    <script>document.addEventListener('DOMContentLoaded', function () {
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        const cartList = document.getElementById('cart-list');
+        const totalAmount = document.getElementById('total-amount');
+        const clearCartButton = document.querySelector('.clear-cart');
+    
+        let cart = [];
+    
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const product = this.parentNode;
+                const productName = product.querySelector('.product-name').textContent;
+                const productPrice = parseFloat(product.querySelector('.product-price').textContent.slice(1));
+    
+                addToCart(productName, productPrice);
+                updateCartUI();
+            });
+        });
+    
+        clearCartButton.addEventListener('click', function () {
+            clearCart();
+            updateCartUI();
+        });
+    
+        function addToCart(name, price) {
+            cart.push({ name, price });
+        }
+    
+        function removeItem(index) {
+            cart.splice(index, 1);
+        }
+    
+        function clearCart() {
+            cart = [];
+        }
+    
+        function calculateTotal() {
+            return cart.reduce((total, item) => total + item.price, 0);
+        }
+    
+        function updateCartUI() {
+            cartList.innerHTML = '';
+    
+            cart.forEach((item, index) => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Remove';
+                removeButton.addEventListener('click', function () {
+                    removeItem(index);
+                    updateCartUI();
+                });
+    
+                listItem.appendChild(removeButton);
+                cartList.appendChild(listItem);
+            });
+    
+            const total = calculateTotal();
+            totalAmount.textContent = `$${total.toFixed(2)}`;
+        }
+    });
+    </script>
+</body>
+</html>
